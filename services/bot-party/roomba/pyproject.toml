@@ -1,0 +1,26 @@
+[project]
+name = "roomba"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Adnan Wahab", email = "shel.bernstein123@gmail.com" }
+]
+dependencies = [
+    "irobot-edu-sdk>=0.5.3",
+]
+readme = "README.md"
+requires-python = ">= 3.9"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/roomba"]

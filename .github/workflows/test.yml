@@ -1,0 +1,42 @@
+name: CI/CD Pipeline
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Nix
+        uses: cachix/install-nix-action@v14
+        with:
+          install_url: https://nixos.org/nix/install
+
+      - name: Build with Nix
+        run: nix-build
+
+      - name: Log in to Tailscale
+        run: sudo tailscale up --authkey ${{ secrets.TAILSCALE_AUTHKEY }}
+
+      - name: Build and push Docker images
+        run: |
+          echo "DOCKER_BUILDKIT=1" >> $GITHUB_ENV
+          docker build -t your-image-name .
+          docker push your-image-name
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Deploy
+        run: echo "Deploy step goes here"
+
+      - name: Tailscale network actions
+        run: |
+          sudo tailscale status
+          # Additional Tailscale commands can be added here

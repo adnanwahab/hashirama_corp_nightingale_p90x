@@ -1,0 +1,469 @@
+
+
+make a cool titlte in org-mode
+Machine Learning Marrkup Langauge
+
+https://github.com/Mozilla-Ocho/llamafile
+how long does it take to build 1million tokens
+
+https://extensionworkshop.com/
+https://github.com/mdn/webextensions-examples
+* measure how much time sitting + standing + laying down - ideally 4/4/4 ??? - also py/go/cuda/nix needs to be 4/4/4/1/1
+make it possible to move multi[ple tabs in arc to another space - auto categorize - and also auto categoreize
+
+https://doc.babylonjs.com/features/featuresDeepDive/mesh/gaussianSplatting
+https://developer.mozilla.org/en-US/docs/Web
+https://github.com/Mozilla-Ocho/llamafile
+
+
+1pw
+
+new event = difference in world state - check(https://github.com/orgs/google/repositories?language=&sort=stargazers&type=all&q=sort%3Astars&page=3)
+
+made react-htmx
+  delivers go endpoints
+
+add arc extension - vacumn LINKS + SCHEDULE ? -> keep one column open and make only right swap ??? ?
+HOLY SHIAT
+reward : https://mastodon.social/auth/sign_up
+https://apps.apple.com/us/app/pixel-pals-widget-pet-game/id6443919232
+https://www.emergetools.com/
+
+
+e
+CUDA = 2hr
+OPS = 2 hr
+Jelly FIN
+IMMICH
+PROMETHEUS
+ON PREM TRUSTLESS ENV installing in lopl
+
+
+Blog
+1. Robotic Economics
+   what happened to roomba??
+   revive roomba cat - monday
+2. robot cat sitter - detect when cat is distressed - cat was in closet - tuesday
+3.  - thursday - future city + biotech robot onomics
+auto applier
+local LLM yeah
+P2P LLM ??
+- hashirama.blog/control-switch
+  not saw - riddles and scavenger hunt
+1. Labeling tool w/ auto labeling
+2. First Robot w/ free will - command and control for "fleets of robots"
+   AI powered decision making - planning made visual and executable / freezeable
+   sapolsky + can build itself - 700
+   200 arm
+   200 roomba
+   200 gpu
+   100 camera
+3. Humane Captcha - Animal Noises
+4. "Observablility" / interpretability "platform""
+    open source free forever like bear and speech (freeBSD)
+        give instructions to robot and human in natural language -> robot debugger?
+            freeze time, rewind
+                see a different path?
+                blur line between simulation and reality
+                multiplayer simulation editor -> see improvements to model in real time
+                "woah what did you just do???""
+        insight = "is my robot doing right thing" - same a human
+        run experiments = see results in a menaingful way
+        science = pursuit of truth
+        how can ai create jobs ? - look up how samasource made jobs -> which industries need it most?
+        healthcare supply chain? research, development, disitribution,etc.
+
+5. "ANSWER QUERY " -> what happend in the movie around 30 seconds ago.
+
+
+0. Quote -> video locator
+   youtube instant for video wow
+   python = create transcript TREE
+   GOLANG = USE OUTPUT OF MODEL TO CREATE TRIE AND WALK IT + react
+1. Dating Photo Generator / Profile Evaluation - ViT
+2. Robot Doctor / Cat Feeder / house Cleaner - coop robot - waypoint mode
+   SELF HEALING MAPS + on prem gpu + 2000 dollars lol + multipalyer
+   study that anduril video - command and control graphics and shit
+3. Dynamical Systems Designer ()
+   - When you take a photo -> trigger if object detected :):):):)
+4. Visual Tree Search - Distil.Pub
+   Turn AI Research into Tools ASAP
+5. local LLM development + deployment .emacs-lisp -
+   LLM assistant - visual llm
+   Planning + Prediction
+   information diet / reccomendation engine
+   rewind.ai = WAYLAND + HYPRLANDIA
+   injects your chatGPT into your local LLM
+   dirty-talk / spiciness ranking
+   humor ranking
+   find perfect text -> very good -> applies david swift
+6. Relationship Analyzer -> reads texts and tells you whats up - break it down like david swit ?x
+
+   Bookmarks -> RAG in SQLITE
+   would you use CUDA IN FEATURE EXTRACTION for 3D MAPS ??? LOL PENIS
+
+? warhammer + Dungeons and dragons - story simulator wow
+
+
+   open source p2p labeling tool for LLMs, robotics, and everything in between.
+       - only you would think of this - hackathon @ samasource
+         label Box + Scale.AI + (Data Annotation)
+       - use mechanical turk + people on reddit ??
+
+
+   Scrape Linkedin + Job Website of company and then
+       get a list of all their skills
+       track these skills over time
+       make highly incediary post saying -> android beat IOS
+
+   2 sided chatbot -> uis that open AI must have
+6. Virtual Reality Mathematics Adventure
+
+   holochain + stream game
+   Inject on monday
+
+100 uses for gpu
+1. detect when raja cries
+2. detect how many birds near appartment
+3. detect how many cars on road
+4. Ambient noise detection
+5. Competitive Photo Building (bumble, insta, hinge, airbnb)
+6. social cue reading -> doctor i feel sick
+7. presentation skills / charisma training
+8. karaoke - grading you, pitch matching, beat meaching, transcription
+9. image search
+10. software planning + estimation
+11. Relationship Coach -> pierre, tim ray, stefan, todd, alex, dswift
+12. delivery weed lol
+13. Shared Model Building of reality -> Cooperative Building -> starcraft Reality MMO
+14.
+
+
+
+# Hashirama
+https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_Quickstart.html
+
+#targets
+* Desktop w/ 3090
+* server @ runpod w/ 3090 https://www.runpod.io/gpu-instance/pricing
+* Server @ hyperstack https://www.hyperstack.cloud/gpu-pricing
+* server @ https://vast.ai/
+* server @ tensordock
+* server @ fly.io
+* server @ hertzener
+* server @
+* server @ aws spot instances - 70% discount
+* server @ paperspace FREE
+* server @ replit?
+* server @ https://vedge.cloud/
+* server @ https://jarvislabs.ai/
+* server @ lambdalabs
+* server @ lightning.ai
+* https://vm.massedcompute.com/signup?linkId=lp_034338&sourceId=massed-compute&tenantId=massed-compute&utm_source=reddit&utm_medium=post
+* Jetson orin
+* jetson nano
+* collab pro
+* databricks
+* server @ digital ocean
+* serer @ scaleway / railway / render?
+* Jetson AGX Orin 64GB Developer Kit -
+https://www.amazon.com/NVIDIA-Jetson-Orin-64GB-Developer/dp/B0BYGB3WV4/ref=sr_1_1?crid=R0D1Z1S9WP5J&dib=eyJ2IjoiMSJ9.DUBgnaKNibB4wjWIbdwH2q9-uGDiJ92NuzV0cEbOPPRgy266h2qavrf_EI9KG1uKQ9-URKnmaYctMjRlUflfWLsFryFLp_fSA81j_zSP2eVVDjJ1YJDieKe6cvdxFNiGMXd07eqi8PI2f3yurown9TpxLG2mSakjmNU0k5mFjKdveSRv5JsXglKmPCJKotrAcQ1sZJZ3L2twlDgMAa5uG-ygst9B37IydTMJ_oo7CFfVTLJhgRKxl5jfqiPD-xZ64UxWOGUubkZNh5yfcEXocaulDK9ZW6XRCFJrp9zlDZg.RWriU9ham9B3B-PTduutExnR9egur7T6U7spwBd9BTw&dib_tag=se&keywords=nvidia+orin+64gb&qid=1717112750&s=electronics&sprefix=nvidia+orin+64%2Celectronics%2C133&sr=1-1&ufe=app_do%3Aamzn1.fos.17f26c18-b61b-4ce9-8a28-de351f41cffb
+* Hashirama Lab Corp
+
+is a new kind of AI R&D lab which creates practical end-user products based on foundational research breakthroughs.
+
+Thesis = computer graphics + AI Planning + neural network plumbing
+
+(create labeling tool, validation, verification, continuous evaluation, and instrumentation?)
+
+tool list
+1. https://www.genymotion.com/
+2.
+
+# PYTHON PACKAGING - ROS????
+https://robostack.github.io/GettingStarted.html
+https://docs.trossenrobotics.com/interbotix_xsarms_docs/ros2_packages/joystick_control.html
+
+jetson-containers run $(autotag ros-humble-desktop)
+
+ modern computer vision techniques like Transformers
+Experience with tracking techniques like data association and state estimation
+Demonstrated ability to create realtime systems that solve difficult perception tasks
+
+realtime sensors,
+poinctloud, mesh, voxel-represetnation, pxel-domaincvpr, iccv, rss, icra, e
+ nonlinear non Gaussian multi hypotheses tracking
+ ith weighted nonlinear least square estimation like GTSAM
+probabilistic techniques
+
+Investigate, prototype and train/evaluate networks for solving data association problems ie: track-detection matching, using geometric and embedded features
+Investigate, prototype and train / evaluate networks for solving recursive and / or moving window filtering / estimation problems for non-stationary non-Gaussian noise
+Investigate, prototype and train / evaluate networks for solving dynamic occupancy estimation problems with and without agent/shape assumptions
+Investigate, prototype and train / evaluate networks for solving causal / recursive multi-target multi-modal tracking problem
+
+
+Ray
+(base) adnan@ubuntu:~$ jetson-containers run $(autotag ros:humble-desktop)
+
+may-sep
+may 29
+
+
+jetson containers
+  vision transformer - auto label
+
+
+todo:
+  diff react native and kotlin - jetpack compose - mixin atak to each
+  https://github.com/adnanwahab/making-atak-better
+  https://github.com/adnanwahab/android-studio-test
+  https://github.com/adnanwahab/hashirama_corp_nightingale_p90x/tree/main/services/archive/HashiramaCorp_RobotDoctor
+  https://tak.gov/registration/registration_requests
+
+roomba + nix
+https://portforward.com/
+
+https://warhammer40k.fandom.com/wiki/Ahriman
+https://warhammer40k.fandom.com/wiki/Thousand_Sons
+TZENNTCH
+
+
+akagi, kaiji, jamie lannister, guttsu, ozymandias,
+anakin https://nyaa.land/?f=0&c=0_0&q=Akagi
+akagami no shanks
+sasuke/naruto
+eren,
+
+
+https://news.ycombinator.com/item?id=39387641 - uv
+https://wiki.nixos.org/wiki/Python - micromaba
+poetry
+
+oss - nix , golang, android,
+
+
+1. botparty face
+2. watchers -> trigger - when someone tweets hello world -> make roomba move -> when see person -> reoomba move
+
+3. zed eyes
+
+4. arm -> buy
+5. waypoint map
+
+8.
+9.
+10.
+
+
+run replits on GPU
+https://replit.com/@nyc-map/GOSCRAPER#main.go
+
+
+deploy-rs
+pybluez
+pybluez
+
+
+use flox as a shim for nix
+use nix to setup direnv
+each project subfolder has its own modular setup config
+use flake for everything
+
+
+
+- [ ] Nix Config
+  - [ ] Jupyter Notebook
+  - [ ] Zed Camera Integration
+  - [ ] Trossen Arm Integration
+  - [ ] create 3 integration
+
+
+
+
+  - [ ] auto labeling
+  - [ ] scene reconstruction -> action pairs
+  - [ ] replit testsuite, ATAK app, admin,
+  - [ ] teleop
+*
+
+* lol acronyms
+https://github.com/NixOS/nixops
+https://github.com/Xe/flake-configs
+https://github.com/Xe/x/tree/master
+https://localai.io/basics/container/
+
+## css: build tailwindcss
+.PHONY: css
+css:
+	tailwindcss -i css/input.css -o css/output.css --minify
+
+## css-watch: watch build tailwindcss
+.PHONY: css-watch
+css-watch:
+	tailwindcss -i css/input.css -o css/output.css --watch
+** ui widgets
+add pixel streaming via GSTREAMER + l24loopback
+        https://hono.dev/
+        https://github.com/jritsema/go-htmx-tailwind-example/blob/main/templates/row.html
+        https://replit.com/@nyc-map/GOSCRAPER#.gitignore
+        https://www.youtube.com/watch?v=k00jVJeZxrs
+        https://processwire.com/
+* https://daisyui.com/components/menu/
+* https://tamagui.dev/
+https://www.youtube.com/watch?v=rhWfPJPnOKE
+https://www.youtube.com/watch?v=rhWfPJPnOKE
+https://github.com/wing8169/golang-todo/blob/main/tailwind.config.js
+https://www.reddit.com/r/golang/comments/1bvtlwo/proper_setup_tutorial_for_golang_echo_htmx_templ/
+https://github.com/danawoodman/go-echo-htmx-templ
+https://echo.labstack.com/docs/cookbook/hello-world
+https://echo.labstack.com/docs/cookbook/streaming-response
+https://tailwindui.com/components/application-ui/forms/form-layouts
+https://echo.labstack.com/docs/cookbook/websocket
+https://tailwindcss.com/docs/installation
+https://tailwindui.com/components/marketing/sections/heroes
+https://tailwindui.com/components/marketing/sections/blog-sections
+* https://tailwindui.com/components/application-ui/page-examples/detail-screens
+SCHEDULED: <2024-06-03 Mon>
+https://news.ycombinator.com/item?id=39036693
+https://chatgpt.com/c/9eabbbef-2af3-4219-bbe2-15e362e0c1f9
+https://htmx.org/server-examples/
+https://www.crocodile.dev/blog/css-transitions-with-tailwind-and-htmx
+https://news.ycombinator.com/item?id=33988388
+https://github.com/danawoodman/bun-htmx
+https://flowbite.com/docs/getting-started/introduction/
+https://riupress.pl/blog/atomic-design-with-templ-htmx-alpinejs-and-tailwind
+https://preline.co/
+https://x.com/simonecanciello/status/1797544953742324182
+https://www.youtube.com/watch?v=oDcb3fvtETs
+https://www.youtube.com/watch?v=aqGBqjvn0fw
+https://x.com/htmx_org/status/1797712198044913752
+https://x.com/yassineyousfi_/status/1797739974747664443
+https://x.com/onirenaud/status/1797632928589214168
+https://x.com/_davideast/status/1797684456012271827
+https://www.youtube.com/watch?v=YinfynTz77s
+https://htmx.org/essays/hypermedia-driven-applications/
+
+https://github.com/developedbyed/
+* ops/platform
+build times must be less than 1s
+right now, go build time for home page = 20 seconds
+
+Android Studio for ATAK is like 2 min
+get it down to like 1s
+i dont care how
+* SubSytems
+** make an auto-screenshot -> gif video for each of the tiles -> hover to see move wow
+** make an open source "fabric" that communicates between nodes kinda like ERLANG
+umm but doesnt GRPC DO THIS???
+toolchain go1.22.2
+
+** SiteMap
+         <!--
+         Quote -> Video Locator ? - replace or plug into jellyfin OOMG
+             Dating Photo Generator - take two photos and compute union
+
+             Vision Transformer
+
+
+             /quote
+             /dating-photo-generator
+             /vision-transformer
+
+
+             fix
+           - android
+           - steam deck?? lo
+           - robotics "homelab / hobbyist"  +
+           - dating photos
+           - linux desktop software
+           - specifically Wayland Desktop Environment
+           - using LLMs to parse logs and create summaries / solutions and error messages that are human - readable
+           - Book maker
+           - trigger events from photos you take = stream game
+           - automation API ? (VM + PIXEL STREAM LOL VIA WEBRTC w/ P2P LOL )
+           - Information diet analyzer / filter ? - visual reccomendation engine + RAG BUILDER lol
+https://f-droid.org/
+
+
+UBI = everyone votes once per day.
+airsonic'
+Gboard (Google Keyboard)
+https://wire.com/en/
+libradns
+
+https://mullvad.net/en/browser/
+newppe        -->
+* TBD
+https://github.com/FreshRSS/FreshRSS
+https://github.com/getsentry/self-hosted
+https://github.com/YaoApp/yao
+https://github.com/getumbrel/umbrel
+https://github.com/sandstorm-io/sandstorm
+https://github.com/linkwarden/linkwarden
+https://github.com/Lissy93/awesome-privacy
+https://github.com/Lissy93/awesome-privacy
+https://github.com/m1k1o/neko - WEBRTC
+https://github.com/hbons/SparkleShare
+https://github.com/Atarity/deploy-your-own-saas
+https://github.com/langfuse/langfuse
+https://github.com/orchest/orchest data pieplein
+
+https://github.com/dgtlmoon/changedetection.io
+https://github.com/getumbrel/llama-gpt
+https://github.com/sergiotapia/magnetissimo
+https://github.com/appwrite/appwrite
+https://github.com/awesome-selfhosted/awesome-selfhosted
+https://github.com/photoprism/photoprism
+https://github.com/appsmithorg/appsmith
+https://github.com/usememos/memos
+https://github.com/louislam/dockge
+https://github.com/owncast/owncast
+https://github.com/mikeroyal/Self-Hosting-Guide
+https://github.com/gethomepage/homepage
+https://github.com/Lissy93/dashy
+https://github.com/gethomepage/homepage
+https://github.com/bastienwirtz/homer
+https://github.com/tabler/tabler
+https://github.com/PanJiaChen/vue-element-admin
+https://github.com/strapi/strapi
+https://github.com/allinurl/goaccess
+https://github.com/linuxserver/Heimdall
+https://github.com/hyperdxio/hyperdx
+https://github.com/creativetimofficial/tailwind-starter-kit
+https://github.com/openblocks-dev/openblocks
+https://github.com/TwiN/gatus
+https://github.com/ajnart/homarr
+https://github.com/coreui/coreui-free-react-admin-template
+https://github.com/uptrace/uptrace
+https://github.com/boramalper/magnetico
+https://github.com/boramalper/magnetico
+https://github.com/jpillora/cloud-torrent
+https://github.com/Volmarg/personal-management-system - personal manage wiki
+*
+
+https://github.com/tycrek/degoogle - video, Gboard (Google Keyboard) ,
+
+https://f5bot.com/
+
+* ChangeLog
+** June 1
+fixed caddy
+** June 2
+fixed subproccesses
+got tail wind 3 - switch to 4 later yay
+** June 3
+live reload hacked in
+WOW THATS TODAY
+integrate
+  - iphone
+  - android
+  - x1
+  - macos
+  - nixos vm
+  - steam deck
+  - googles
+  - cloud hertzner or lambdalabsl
+  - jetson nano
+  - jetson orin - 10 installs
+  - jetson orin nx x * 8?
+  - h100

@@ -1,0 +1,93 @@
+schema = 3
+
+[mod]
+  [mod."github.com/golang-jwt/jwt"]
+    version = "v3.2.2+incompatible"
+    hash = "sha256-LOkpuXhWrFayvVf1GOaOmZI5YKEsgqVSb22aF8LnCEM="
+  [mod."github.com/google/uuid"]
+    version = "v1.6.0"
+    hash = "sha256-VWl9sqUzdOuhW0KzQlv0gwwUQClYkmZwSydHG2sALYw="
+  [mod."github.com/labstack/echo/v4"]
+    version = "v4.12.0"
+    hash = "sha256-TPXJv/6C53bnmcEYxa9g5Mft8u/rLT96q64tQ9+RtKU="
+  [mod."github.com/labstack/gommon"]
+    version = "v0.4.2"
+    hash = "sha256-395+BETDpv15L2lsCiEccwakXgEQxKHlYBAU0Ot3qhY="
+  [mod."github.com/mattn/go-colorable"]
+    version = "v0.1.13"
+    hash = "sha256-qb3Qbo0CELGRIzvw7NVM1g/aayaz4Tguppk9MD2/OI8="
+  [mod."github.com/mattn/go-isatty"]
+    version = "v0.0.20"
+    hash = "sha256-qhw9hWtU5wnyFyuMbKx+7RB8ckQaFQ8D+8GKPkN3HHQ="
+  [mod."github.com/pion/datachannel"]
+    version = "v1.5.6"
+    hash = "sha256-w0RgDPDXs0piZQ5uoJOtlGBJYW0LriO61+DOseOuddM="
+  [mod."github.com/pion/dtls/v2"]
+    version = "v2.2.10"
+    hash = "sha256-WHC1Cr6t3vZ/b6uQC4gO98uL8VHAToGTYT0w2R0OqUI="
+  [mod."github.com/pion/ice/v3"]
+    version = "v3.0.7"
+    hash = "sha256-wt1lkxwgpNDsGsoEVN2/kU1NgzJe8GEIWo68TNGoRYs="
+  [mod."github.com/pion/interceptor"]
+    version = "v0.1.29"
+    hash = "sha256-NXnBbbLjwuSbJBBxxPZ3dJRWwcIA4RSz7/G8RpAekdw="
+  [mod."github.com/pion/logging"]
+    version = "v0.2.2"
+    hash = "sha256-e/RKIPmZ6w3CehT7YzpAJLI65tcANZv82XfMXgJDXoU="
+  [mod."github.com/pion/mdns/v2"]
+    version = "v2.0.7"
+    hash = "sha256-yFvSDSvahAcYfr/3OWm8RSqpwo+XcQyCjWMPcqHUvI8="
+  [mod."github.com/pion/randutil"]
+    version = "v0.1.0"
+    hash = "sha256-jl6WfLPH7RV5MQhQtqwSDzhIL0D0eCnDT2L9uButveI="
+  [mod."github.com/pion/rtcp"]
+    version = "v1.2.14"
+    hash = "sha256-1mtd2ru0PdeKBgfdus6lb87lWAp9r1iWX7uf102PSZk="
+  [mod."github.com/pion/rtp"]
+    version = "v1.8.6"
+    hash = "sha256-+FnDXU8T9TaL14w8MsmELnF4liRPY4gQ5K1v13i+u0s="
+  [mod."github.com/pion/sctp"]
+    version = "v1.8.16"
+    hash = "sha256-zDG3tGzTljfw295CNaXV92GOf0UgWHi3YTGWjjC97eQ="
+  [mod."github.com/pion/sdp/v3"]
+    version = "v3.0.9"
+    hash = "sha256-hThDOEgOea367GW/KCf7KkkSXnse73GT3el5wUmgOSI="
+  [mod."github.com/pion/srtp/v3"]
+    version = "v3.0.1"
+    hash = "sha256-38v7EIOOGlWFc5Meeg7ywYk2sARyteOAj1C84lKMdwA="
+  [mod."github.com/pion/stun/v2"]
+    version = "v2.0.0"
+    hash = "sha256-ptqO5Q2UG6rm4AiAJsJ44gycR1OzFRtgNSns2GrQ/gY="
+  [mod."github.com/pion/transport/v2"]
+    version = "v2.2.4"
+    hash = "sha256-ve8ffTtqVa0UjRR6PirvTQ+LgW0v7rtnGjNsDEXITbM="
+  [mod."github.com/pion/transport/v3"]
+    version = "v3.0.2"
+    hash = "sha256-xGpR6CC11+8Yo1UMCxO5BJzvPGQnoozoBvBPWz46xBE="
+  [mod."github.com/pion/turn/v3"]
+    version = "v3.0.3"
+    hash = "sha256-ysB+ByjDtZ22xJIG8oLBL2ZCBXT10EQ00k17TgEFW8o="
+  [mod."github.com/pion/webrtc/v4"]
+    version = "v4.0.0-beta.19"
+    hash = "sha256-OY+zyiQHBkwlxvrtLZb15iOfovAQBW2UXXlYwm9i/1s="
+  [mod."github.com/valyala/bytebufferpool"]
+    version = "v1.0.0"
+    hash = "sha256-I9FPZ3kCNRB+o0dpMwBnwZ35Fj9+ThvITn8a3Jr8mAY="
+  [mod."github.com/valyala/fasttemplate"]
+    version = "v1.2.2"
+    hash = "sha256-gp+lNXE8zjO+qJDM/YbS6V43HFsYP6PKn4ux1qa5lZ0="
+  [mod."golang.org/x/crypto"]
+    version = "v0.22.0"
+    hash = "sha256-2+u9nd32+Bi7EEv7QFc12CRTbfV7DApNv+yKIr7+lTw="
+  [mod."golang.org/x/net"]
+    version = "v0.24.0"
+    hash = "sha256-w1c21ljta5wNIyel9CSIn/crPzwOCRofNKhqmfs4aEQ="
+  [mod."golang.org/x/sys"]
+    version = "v0.19.0"
+    hash = "sha256-cmuL31TYLJmDm/fDnI2Sn0wB88cpdOHV1+urorsJWx4="
+  [mod."golang.org/x/text"]
+    version = "v0.14.0"
+    hash = "sha256-yh3B0tom1RfzQBf1RNmfdNWF1PtiqxV41jW1GVS6JAg="
+  [mod."golang.org/x/time"]
+    version = "v0.5.0"
+    hash = "sha256-W6RgwgdYTO3byIPOFxrP2IpAZdgaGowAaVfYby7AULU="

@@ -1,0 +1,19 @@
+{
+  "apps": {
+    "dynamic_dns": {
+      {
+			"domains": {
+				"example.com": ["@"]
+			},
+      "dns_provider": {
+        "porkbun": {
+          "name": "porkbun",
+          "api_key": "pk1_5088f253792b44c09965a2f9796873998d3d161329b44c699d95eacd6e8571a3",
+          "secret_api_key": "sk1_886c409d959dc128bf14f559d49fd479b157e60c3c183508039e182721139f95"
+        }
+      },
+      "domains": ["hashirama.blog"],
+      "check_interval": "5m"
+    }
+  }
+}

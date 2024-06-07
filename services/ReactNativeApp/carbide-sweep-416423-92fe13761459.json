@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "carbide-sweep-416423",
+  "private_key_id": "92fe13761459bd998205226e005ff011ef862c64",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCVm9ot/Ido/o5Q\nefv376giXhJ3DrtI8M5ODkbEn8U5w9M1qnDMp3hMjn62nO19PND+DkhfqXXVrNzd\nSqPIz6ydiIAU0Hj4v93GHqrlgpyMmczSVoSwy7T9FC3OumTs/RtYrtUPBPanJJOT\n0OeNtuFTLJwttzQLko742D0RnDsd9Kw3yNXS+Jeh1fhuMloKavPO2068SVHXre+A\nR3TlB/FKbRUpl/8J74bKNpStxwON6i0zGS606YFitRDBmq77i+sSQ4fPApLcaX/s\n0DrSH2/9K856EnH+57smVwXAdUrTkEkb70LRlmVAvSt94zPTtpUQ+B431SsLwlLm\nz5aPsMO/AgMBAAECgf9uD+TH7/+uPkHJnUlrco6UD0uGSvrSWQAXwb5OPeaE7eDJ\nRO+29NKLf55jZGSoExWtJtTCNj4knrHdcAu4r7n4Ksi53KR3sK8hZsOoFMPBVrmt\nWU5EwkK5QcnGoVmeVJYe/SprjOXoEKsrvi6bEu9b68r51s1zC17NsvHlArUlqLpo\nPWAMSYuLO7JwR1CKp9hhe4lJ4ARhsXZSax1Uq1Jr9w08hpxfZeSyxIkl/AZc7ods\nGtWACVuNRfNe1857XAfc7VNQjcEpnzYhy7ZSo3HMvEgx+9wuU8CYSKmK1lusjXfS\nBauqowSsJcoU2j9JK0zDoz2efc4YRTkxmuYegikCgYEAxbC1x6PGUMHuM81KnJBW\nhS9Me13oLw44lQ02D+bU80RqAUZqxrQYmRZWIa3l/EfCvdVykaXT3qF3TTFrjPFg\nLXqsoS8sn/MsdB3EdQM37y31X+u91Jy5xblB/lB8oOXJeOWekG2kw1souwJx7/iM\nj0uDo+3YOKM/UwuVKPKbI0sCgYEAwbyVY+G48l/67H6AxPiIzi1iiOsvyS2ImIDS\nuhAp8waHMRCbh8PuIMWOHtZkpO7D5oCVgCUCWI2jBxscxLaTQZgZlwD2elHYZzc/\nozYv3KVIcdJjCeciuNEq4Z0OGD4YoX08/9cQ3xkB6g3Tl/G0x8meJ+3rmxHeF7FS\nxPuuZN0CgYEAnVIlNzy0A2xxXbQPnkyXLeIYIUz4CwpsKOGclkcCTJ2zJlSdgIet\n05Yc8Sxsi7mn1l5YkGPBGbixMjMT/dPQ0CCB5Luf7aIdTEKsJtpq1uJiFPWL2fjn\nNdxaEkKHC5wSGy3QY+t9ZSHUZg5qEahgY2Ca4AfVPC1dpX7gMvfuUcUCgYEAqBqc\nfdiEhDroHYD+9uq4uj4DO87m3edWmQ1ey/fujmNhtx8z9S/7VhBVa0iYd8x9y2pT\nTqfOS0xK44WRBtdtGwOBYNeDB0wxPA5id5ozGX+JRspJCXS3WiqUzMNcUYjAEo/6\n9/uDNjIayR5KNZOTS7AUPY1iXGG6llBVA3tnLTkCgYACy7MqO0xxAEsc+UQhsKk4\n2+YcI/BcuGlrDAI3SaFLm/u9U0O4Scc6UAXdZl3e80d22/nZfuoao6GYXQt2nirp\npsI3MvQUfnoiJUvbZuBENzQhvaDGsX5GeiodkEMjcU+7/wmEWnkgKnt0J9QLV9L3\nV4jcpDk9/KDleroGsgkiDg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "service-account@carbide-sweep-416423.iam.gserviceaccount.com",
+  "client_id": "108817644478784850386",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/service-account%40carbide-sweep-416423.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
