@@ -69,3 +69,4 @@ services/homelab-status-page/static/video/dSX5eoD4-u4.mp4
 flake.lock
 
 page/
+.env
