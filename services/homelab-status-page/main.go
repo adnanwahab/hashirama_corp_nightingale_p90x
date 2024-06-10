@@ -1,13 +1,6 @@
 package main
-
-//https://www.youtube.com/watch?v=Rp3A5q9L_bg
-//
-// CSV - output on the level of reddit.com/r/place
-
-
-
 import (
-
+	"golang.org/x/net/websocket"
 	"bytes"
 	"io"
 	///"log"
@@ -15,7 +8,6 @@ import (
 	"path"
 	"time"
 	"context"
-
 	//"github.com/gosimple/slug"
 	//"github.com/yuin/goldmark"
 )
@@ -23,19 +15,408 @@ import (
 	"fmt"
 	"strings"
 	"html/template"
-
-
 	"path/filepath"
-
 	"github.com/labstack/echo/v4"
 		"net/http"
-	//"github.com/labstack/echo/v4/middleware"
-	//
-	//
 	"github.com/kkdai/youtube/v2"
 	"github.com/a-h/templ"
 	"os/exec"
+	"github.com/ollama/ollama/api"
+	"log"
+	//"syscall"
+	//"os/signal"
+	//"github.com/tmc/langchaingo/llms"
+	//"github.com/tmc/langchaingo/llms/openai"
 )
+import (
+	"encoding/json"
+	"errors"
+	"io/fs"
+
+	"runtime"
+"net"
+	//"github.com/playwright-community/playwright-go"
+)
+	//"github.com/labstack/echo/v4/middleware"
+	//"https://github.com/sirupsen/logrus"
+	//"tailscale.com/atomicfile"
+	//https://github.com/microsoft/JARVIS
+	// https://github.com/microsoft/LoRA
+	// https://github.com/microsoft/nni
+	// https://github.com/microsoft/VoTT
+	// https://github.com/pnnl/neuromancer
+	// https://github.com/huggingface/transformers
+	// https://github.com/iperov/DeepFaceLab
+	// llm-course https://github.com/mlabonne/llm-course
+	// https://github.com/ray-project/ray
+	// https://github.com/ZuzooVn/machine-learning-for-software-engineers
+	// https://github.com/donnemartin/data-science-ipython-notebooks
+	// https://github.com/lutzroeder/netron
+	// https://github.com/eugeneyan/applied-ml
+	// https://github.com/google-ai-edge/mediapipe
+	// https://github.com/iperov/DeepFaceLive
+	// https://github.com/trekhleb/homemade-machine-learning
+	//https://github.com/qdrant/qdrant https://github.com/tensorflow/tfjs
+	// https://github.com/EthicalML/awesome-production-machine-learning
+	// https://github.com/emilwallner/Screenshot-to-code
+	// https://github.com/ml-tooling/best-of-ml-python
+	// https://github.com/bharathgs/Awesome-pytorch-list
+	// https://github.com/tensorflow/tensor2tensor
+		//https://github.com/huggingface/datasets
+	//https://github.com/microsoft/AirSim?tab=readme-ov-file
+	//		"github.com/siadat/ipc"
+	//		 https://github.com/james-barrow/golang-ipc
+	//		 https://github.com/lirm/aeron-go
+	//https://github.com/deepset-ai/haystack
+	// https://github.com/kubeflow/kubeflow
+	// https://github.com/jacobgil/pytorch-grad-cam
+	// https://github.com/bigscience-workshop/petals
+	// https://github.com/gorse-io/gorse
+	// https://github.com/iperov/DeepFaceLab
+	// https://github.com/photoprism/photoprism
+	// https://github.com/streamlit/streamlit
+	// https://github.com/ChristosChristofidis/awesome-deep-learning
+	// https://github.com/topics/deep-learning
+	// https://github.com/kailashahirwar/cheatsheets-ai
+	// https://github.com/microsoft/fluentui
+	// https://github.com/search?q=topic%3Aadaptation+org%3Amicrosoft&type=Repositorise
+	// https://www.amazon.com/Practical-Simulations-Machine-Learning-Buttfield-Addison-ebook/dp/B0B3JMNT25/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=&sr=
+	// https://github.com/topics/go
+	// https://github.com/warpdotdev/Warp
+	// https://github.com/seemoo-lab/opendrop
+	//
+	// mlpy,go,nix
+	// https://github.com/mviereck/x11docker
+	// https://github.com/sentriz/cliphist
+	// https://github.com/danielmiessler/fabric
+	// https://github.com/duckdb/duckdb
+	//		 https://github.com/charmbracelet/log
+	//https://github.com/pterm/pterm)
+	// https://github.com/akavel/up
+	// https://github.com/waydroid/waydroid
+	// pstree, ss, iftops, nethogs, sar
+//chrome does IPC using IPC is performed using unix domain sockets. The name of the socket is based on the path to the user-data directory and the version of the browser/service creating the sockets.
+//https://github.com/ggerganov/wave-share
+// https://ggerganov.com/
+
+// Privacy: Data stays on the local device, minimizing exposure to potential breaches and misuse.
+// Agency: Users have greater control over their AI tools and data.
+// Cost-effectiveness: Reduces reliance on expensive cloud infrastructure, lowering costs for developers and users.
+// Reliability: Local processing ensures continuous operation even without internet connectivity.
+//
+//
+
+func websocket_handler(c echo.Context) error {
+	websocket.Handler(func(ws *websocket.Conn) {
+		defer ws.Close()
+		for {
+			// Write
+			err := websocket.Message.Send(ws, "Hello, Client!")
+			if err != nil {
+				c.Logger().Error(err)
+			}
+
+			// Read
+			msg := ""
+			err = websocket.Message.Receive(ws, &msg)
+			if err != nil {
+				c.Logger().Error(err)
+			}
+			fmt.Printf("%s\n", msg)
+		}
+	}).ServeHTTP(c.Response(), c.Request())
+	return nil
+}
+
+func go2node () {
+	print("sghit")
+	//https://github.com/mdirkse/i3ipc-go
+	//https://pkg.go.dev/plugin@go1.22.4
+	// https://go.dev/blog/gob
+	// cmd := exec.Command("node", "child.js")
+	// cmd.Stdout = os.Stdout
+	// cmd.Stderr = os.Stderr
+
+	// channel, err := go2node.ExecNode(cmd)
+	// 	if err != nil {
+	// 	panic(err)
+	// }
+	// defer cmd.Process.Kill() //same as await? or defer close(channel)
+	// channel.Write(&go2node.NodeMessage{
+	// 	Message: []byte(`{"hello": "node"}`),
+	// })
+
+	// // Golang will output: {"hello":"golang"}
+	// msg, err := channel.Read()
+	// if err != nil {
+	// 	panic(err)
+	// }
+	// fmt.Println(string(msg.Message))
+
+	// // Wait node child process exit
+	// cmd.Process.Wait()
+	// https://github.com/zealic/go2node/blob/6eb98c52fa4b9cb7bab0f550db04eebac66ff113/ipc/channel.go#L25
+}
+
+func reader() {
+    pipePath := "/tmp/my_named_pipe"
+
+    // Open the named pipe for reading
+    pipe, err := os.OpenFile(pipePath, os.O_RDONLY, os.ModeNamedPipe)
+    if err != nil {
+        fmt.Println("Error opening pipe:", err)
+        return
+    }
+    defer pipe.Close()
+
+    buffer := make([]byte, 1024)
+    n, err := pipe.Read(buffer)
+    if err != nil {
+        fmt.Println("Error reading from pipe:", err)
+        return
+    }
+
+    fmt.Println("Message read from pipe:", string(buffer[:n]))
+}
+func writer() {
+    pipePath := "/tmp/my_named_pipe"
+
+    // Open the named pipe for writing
+    pipe, err := os.OpenFile(pipePath, os.O_WRONLY, os.ModeNamedPipe)
+    if err != nil {
+        fmt.Println("Error opening pipe:", err)
+        return
+    }
+    defer pipe.Close()
+
+    message := "Hello from the writer!"
+    _, err = pipe.Write([]byte(message))
+    if err != nil {
+        fmt.Println("Error writing to pipe:", err)
+        return
+    }
+
+    fmt.Println("Message written to pipe")
+}
+//mkfifo /tmp/my_named_pipe
+
+func server() {
+    socketPath := "/tmp/unix_domain_socket"
+
+    // Remove any existing socket file
+    if err := os.RemoveAll(socketPath); err != nil {
+        panic(err)
+    }
+
+    // Listen on the Unix domain socket
+    // listener, err := net.Listen("unix", socketPath)
+    // if err != nil {
+    //     panic(err)
+    // }
+    // defer listener.Close()
+
+    // fmt.Println("Server is listening on", socketPath)
+
+    // for {
+    //     conn, err := listener.Accept()
+    //     if err != nil {
+    //         panic(err)
+    //     }
+
+    //     //go handleConnection(conn)
+    // }
+}
+func client() {
+    socketPath := "/tmp/unix_domain_socket"
+
+    conn, err := net.Dial("unix", socketPath)
+    if err != nil {
+        panic(err)
+    }
+    defer conn.Close()
+
+    message := "Hello, server!"
+    _, err = conn.Write([]byte(message))
+    if err != nil {
+        panic(err)
+    }
+
+    buffer := make([]byte, 1024)
+    n, err := conn.Read(buffer)
+    if err != nil {
+        panic(err)
+    }
+
+    fmt.Println("Received reply:", string(buffer[:n]))
+}
+
+
+// DB is a database backed by a JSON file.
+type DB[T any] struct {
+	// Data is the contents of the database.
+	Data *T
+
+	path string
+}
+
+// Open opens the database at path, creating it with a zero value if
+// necessary.
+//
+func AtomicWriteFile(filename string, data []byte, perm os.FileMode) (err error) {
+	fi, err := os.Stat(filename)
+	if err == nil && !fi.Mode().IsRegular() {
+		return fmt.Errorf("%s already exists and is not a regular file", filename)
+	}
+	f, err := os.CreateTemp(filepath.Dir(filename), filepath.Base(filename)+".tmp")
+	if err != nil {
+		return err
+	}
+	tmpName := f.Name()
+	defer func() {
+		if err != nil {
+			f.Close()
+			os.Remove(tmpName)
+		}
+	}()
+	if _, err := f.Write(data); err != nil {
+		return err
+	}
+	if runtime.GOOS != "windows" {
+		if err := f.Chmod(perm); err != nil {
+			return err
+		}
+	}
+	if err := f.Sync(); err != nil {
+		return err
+	}
+	if err := f.Close(); err != nil {
+		return err
+	}
+	return os.Rename(tmpName, filename)
+}
+func Open[T any](path string) (*DB[T], error) {
+	bs, err := os.ReadFile(path)
+	if errors.Is(err, fs.ErrNotExist) {
+		return &DB[T]{
+			Data: new(T),
+			path: path,
+		}, nil
+	} else if err != nil {
+		return nil, err
+	}
+
+	var val T
+	if err := json.Unmarshal(bs, &val); err != nil {
+		return nil, err
+	}
+
+	return &DB[T]{
+		Data: &val,
+		path: path,
+	}, nil
+}
+
+// Save writes db.Data back to disk.
+func (db *DB[T]) Save() error {
+	bs, err := json.Marshal(db.Data)
+	if err != nil {
+		return err
+	}
+
+	return AtomicWriteFile(db.path, bs, 0600)
+}
+func archive () {
+	//https://github.com/tailscale/tailscale
+	// if _, err := io.Copy(os.Stdout, res.Body); err != nil {
+	// 	log.Fatal(err)
+	// }
+	if true {return }
+	time.Sleep(1)
+	cmd := exec.Command("tr", "a-z", "A-Z")
+	cmd.Stdin = strings.NewReader("some input")
+	var out strings.Builder
+	cmd.Stdout = &out
+	err := cmd.Run()
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("in all caps: %q\n", out.String())
+	   // Create a key to identify the shared memory segment
+    //key := 1234
+
+    // Create the shared memory segment with a size of 4096 bytes
+    // shmid, err := syscall.Shmget(key, 4096, 0666|syscall.IPC_CREAT)
+    // if err != nil {
+    //     fmt.Println("Error creating shared memory segment:", err)
+    //     os.Exit(1)
+    // }
+
+    // // Attach to the shared memory segment
+    // data, err := syscall.Shmat(shmid, nil, 0)
+    // if err != nil {
+    //     fmt.Println("Error attaching to shared memory segment:", err)
+    //     os.Exit(1)
+    // }
+
+    // // Write a string to the shared memory segment
+    // message := "Hello, World!"
+    // copy(data, []byte(message))
+
+    // // Detach from the shared memory segment
+    // err = syscall.Shmdt(data)
+    // if err != nil {
+    //     fmt.Println("Error detaching from shared memory segment:", err)
+    //     os.Exit(1)
+    // }
+
+    // // Display the message read from the shared memory segment
+    // fmt.Println("Message read from shared memory segment:", string(data))
+	// 	// Set up channel on which to send signal notifications.
+	// // We must use a buffered channel or risk missing the signal
+	// // if we're not ready to receive when the signal is sent.
+	// c := make(chan os.Signal, 1)
+
+	// // Passing no signals to Notify means that
+	// // all signals will be sent to the channel.
+	// signal.Notify(c)
+
+	// // Block until any signal is received.
+	// s := <-c
+	// fmt.Println("Got signal:", s)
+    // shmid, err := syscall.ShmOpen("/myshm", os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0666)
+    // if err != nil {
+    //     fmt.Println(err)
+    //     return
+    // }
+
+    // // Map the shared memory segment to the process's address space
+    // shmptr, err := syscall.Mmap(int(shmid), 0, SHMSIZE, syscall.PROT_READ|syscall.PROT_WRITE, syscall.MAP_SHARED)
+    // if err != nil {
+    //     fmt.Println(err)
+    //     return
+    // }
+
+    // // Write to the shared memory segment
+    // message := []byte("Hello from process 1!")
+    // copy(shmptr, message)
+
+    // // Unmap the shared memory segment
+    // err = syscall.Munmap(shmptr)
+    // if err != nil {
+    //     fmt.Println(err)
+    //     return
+    // }
+
+    // // Close the shared memory segment
+    // err = syscall.Close(int(shmid))
+    // if err != nil {
+    //     fmt.Println(err)
+    //     return
+    // }
+}
+//https://www.recallmemory.io/
+// https://github.com/Mintplex-Labs/anything-llm
+
 type Post struct {
 	Date    time.Time
 	Title   string
@@ -43,14 +424,112 @@ type Post struct {
 }
 
 
+func tryStream() {
+	client, err := api.ClientFromEnvironment()
+	if err != nil {
+		log.Fatal(err)
+			ctx := context.Background()
+
+	req := &api.PullRequest{
+		Model: "mistral",
+	}
+	progressFunc := func(resp api.ProgressResponse) error {
+		fmt.Printf("Progress: status=%v, total=%v, completed=%v\n", resp.Status, resp.Total, resp.Completed)
+		return nil
+	}
+
+	err = client.Pull(ctx, req, progressFunc)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	}
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// By default, GenerateRequest is streaming.
+	req := &api.GenerateRequest{
+		Model:  "gemma",
+		Prompt: "how many planets are there?",
+	}
+
+	ctx := context.Background()
+	respFunc := func(resp api.GenerateResponse) error {
+		// Only print the response here; GenerateResponse has a number of other
+		// interesting fields you want to examine.
+
+		// In streaming mode, responses are partial so we call fmt.Print (and not
+		// Println) in order to avoid spurious newlines being introduced. The
+		// model will insert its own newlines if it wants.
+		fmt.Print(resp.Response)
+		return nil
+	}
+
+	err = client.Generate(ctx, req, respFunc)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println()
+}
+
+
+
+func tryLLM() {
+
+	if len(os.Args) <= 1 {
+		log.Fatal("usage: <image name>")
+	}
+
+	imgData, err := os.ReadFile(os.Args[1])
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	client, err := api.ClientFromEnvironment()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	req := &api.GenerateRequest{
+		Model:  "llava",
+		Prompt: "describe this image",
+		Images: []api.ImageData{imgData},
+	}
+
+	ctx := context.Background()
+	respFunc := func(resp api.GenerateResponse) error {
+		// In streaming mode, responses are partial so we call fmt.Print (and not
+		// Println) in order to avoid spurious newlines being introduced. The
+		// model will insert its own newlines if it wants.
+		fmt.Print(resp.Response)
+		return nil
+	}
+
+	err = client.Generate(ctx, req, respFunc)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println()
+}
+
 func Unsafe(html string) templ.Component {
 	return templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
 		_, err = io.WriteString(w, html)
 		return
 	})
 }
-
+//https://github.com/sellisd/awesome-complexity
+// https://scale.com/genai-platform
+// https://twitter.com/sonyatweetybird/status/1584580362339962880
+// https://github.com/dspinellis/awesome-msr#readme
+// https://github.com/ollama/ollama/blob/main/examples/langchain-python-rag-document/main.py
+// https://github.com/ollama/ollama/tree/main/examples/langchain-python-rag-privategpt
+// https://github.com/ollama/ollama/tree/main/examples/langchain-python-rag-websummary
+// https://github.com/ollama/ollama/tree/main/examples/langchain-python-simple
 func renderTemplate(templateName string) echo.HandlerFunc {
+
 	// sweaters := Inventory{"wool",
 	// 	"17"}
 	return func(c echo.Context) error {
@@ -96,8 +575,6 @@ func trimMyDick(filePath string) string {
 	return fileName
 }
 
-
-
 type Template struct {
 	templates *template.Template
 }
@@ -105,6 +582,7 @@ func custom_endpont (c echo.Context) error {
 		base := filepath.Join(os.ExpandEnv("$HOME/hashirama/services/homelab-status-page/"), "readme.org")
 		dat, err := os.ReadFile(base)
 		if err != nil {
+
 			fmt.Print("base \n\n\n", err)
 			return err
 		}
@@ -188,19 +666,13 @@ fmt.Println("finish DL", youtubeURL)
 
         })
 
-	//	//ai whisper
-	//	 turn transcript into summary ?
-	//
-	//
-	//	 on youtube page -> right click = summary
     return nil
 }
-
 //err := filepath.Walk(basePath, func(path string, info os.FileInfo, err error) error {
 func fuck() {
 	cmd := exec.Command("bash", "~/go/bin/templ generate")
-
-
+	//watch_files()
+	//lsof -sTCP:LISTEN
 	var outBuf, errBuf bytes.Buffer
 	cmd.Stdout = &outBuf
 	cmd.Stderr = &errBuf
@@ -210,11 +682,14 @@ func fuck() {
     fmt.Printf("Error: %s\n", errBuf.String())
 	//exec a binary in go ~/go/bin/templ generate from golang
 }
-
-
-//external validation vs respect - no one can trully know you - but also maybe, you cant really know yourself except through others?
 func main() {
-	fuck()
+	 binaryName := os.Args[0]
+
+    // Print the binary name
+    fmt.Println("Binary name:", binaryName)
+	if false {fuck() }
+	if false { tryLLM() }
+	if false { tryStream()}
 	e := echo.New()
 	e.POST("/video-to-pdf", handleConvertVideoToPDF)
 	expandMyPuss := os.ExpandEnv("$HOME/hashirama/services/homelab-status-page/views/*.html")
@@ -229,32 +704,69 @@ func main() {
 	e.GET("/form", renderTemplate("form"))
 	e.GET("/", renderTemplate("index"))
 	e.GET("/custom_endpoint", custom_endpont)
-
+	e.GET("/ws", websocket_handler)
 
 	e.Static("/static", "static")
 	e.Static("/assets", "static")
-	e.Logger.Fatal(e.Start("0.0.0.0:1323"))
+	e.Logger.Fatal(e.Start("0.0.0.0:1337"))
 }
-		//https://github.com/explore
-// https://github.com/2b-t/docker-realtime
-// https://arc.net/l/quote/afqsckfz
-// docker-ros-desktop-vnc
-// Packer for building VM OS (Windows & Linux) templates using Proxmox builder
-// https://github.com/netdata/netdata
-// https://dashy.to/
-// https://github.com/badele/nix-homelab
-// https://github.com/codespaces
-// https://github.blog/2024-06-03-arm64-on-github-actions-powering-faster-more-efficient-build-systems/
+	//https://www.youtube.com/watch?v=Rp3A5q9L_bg
+//
+// CSV - output on the level of reddit.com/r/place
+// https://github.com/livekit/livekit
+// https://github.com/mochman/Bypass_CGNAT/wiki
+// https://github.com/ossrs/srs
+// https://github.com/fatedier/frp
+// https://github.com/bluenviron/mediamtx
+// https://github.com/AlexxIT/go2rtc
+// https://github.com/fyhertz/libstreaming
+// https://github.com/webtorrent/webtorrent
+// https://github.com/pion/example-webrtc-applications
+// https://ksingh7.medium.com/exposing-local-web-socket-connection-securely-with-frp-caddy-eef19881cee6
+// anime search
 
-		//https://pkg.go.dev/text/template
-	   // 	filePath := filepath.Join(os.ExpandEnv("$HOME/hashirama/services/homelab-status-page/views"), templateName+".html")
+//video
+// move - drive
+// arm
+// logging -> map
+// https://github.com/spf13/viper
+// https://github.com/afex/hystrix-go
+// https://github.com/hashicorp/consul/
+// https://github.com/InfluxCommunity/influxdb3-go
+// https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/compatibility/opentracing.md
+// https://github.com/rs/zerolog
+// https://github.com/sony/gobreaker?tab=readme-ov-file
+// go.uber.org/zap
+// github.com/prometheus/procfs
+// github.com/prometheus/common
+// github.com/prometheus/client_model
+// github.com/edsrzf/mmap-go
+// https://github.com/cenkalti/backoff
+//  zlib
+//  https://pkg.go.dev/syscall@go1.22.4#Access
+//  For these reasons, many users decide that traditional interprocess communication (IPC) mechanisms such as sockets, pipes, remote procedure call (RPC), shared memory mappings, or file system operations may be more suitable despite the performance overheads.
+//benchmarking IPC methods in go
+// shmhttps://pkg.go.dev/github.com/ghetzel/shmtool/shm
+// https://awesome-go.com/embeddable-scripting-languages/
+// https://github.com/connectordb/connectordb?utm_campaign=awesomego&utm_medium=referral&utm_source=awesomego
+// gomodrun - Go tool that executes and caches binaries included in go.mod files.
+//get top rated comments on hn
+// https://www.openpolicyagent.org/
+// https://github.com/meta-llama/llama/blob/main/llama/model.py
+// https://github.com/facebookresearch/fairscale
+// https://github.com/akx/ggify
+// https://python.langchain.com/v0.2/docs/introduction/
 
-       // data := map[string]interface{}{
-       //      "Title":   "Hello, World!",
-       //      "Content": "This is a templ template rendered on the fly.",
-       //  }
-//https://echo.labstack.com/docs/category/middleware
-// google drive
-// phone
-// find my friends - realtime dispatch
-// validate projects quick
+
+//if i told you the answer, you would just forget it
+// but if you struggle and derivce the answer, you will be able to apply it because it is the truth
+// even if we have tghe same asnwer
+//
+//
+//
+// productity tips
+// 1. limit tabs
+// 2.block reddit, hn, etc on your computer (you can still have it on your phone)
+// 3.
+// https://github.com/Blaizzy/mlx-vlm
+//

@@ -12,18 +12,67 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["borderify.js"]
+      "js": ["background.js"]
     }
   ],
 
-
-  "permissions": ["webRequest", "webRequestBlocking", "activeTab",
+"options_ui": {
+  "page": "options/options.html"
+},
+  "permissions": [
+                  "<all_urls>",
+  "tabs",
+ "activeTab",
+"alarms",
+"background",
+"bookmarks",
+"browserSettings",
+"browsingData",
+"captivePortal",
+"clipboardRead",
+"clipboardWrite",
+"contentSettings",
+"contextMenus",
+"contextualIdentities",
+"cookies",
+"debugger",
+"declarativeNetRequest",
+"declarativeNetRequestFeedback",
+"declarativeNetRequestWithHostAccess",
+"devtools",
+"dns",
+"downloads",
+"downloads.open",
+"find",
+"geolocation",
+"history",
+"identity",
+"idle",
+"management",
+"menus",
+"menus.overrideContext",
 "nativeMessaging",
+"notifications",
+"pageCapture",
+"pkcs11",
+"privacy",
+"proxy",
+"scripting",
+"search",
+"sessions",
+"storage",
+"tabHide",
+"tabs",
+"theme",
+"topSites",
+"unlimitedStorage",
+"webNavigation",
+"webRequest",
+"webRequestAuthProvider",
+"webRequestBlocking",
+"webRequestFilterResponse",
+"webRequestFilterResponse.serviceWorkerScript"
 
-                  "contextMenus",
-
-                    "<all_urls>",
-  "tabs"
 
                  ]
 }

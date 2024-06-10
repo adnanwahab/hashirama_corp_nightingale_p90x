@@ -6,7 +6,7 @@ tmp_dir = "tmp"
   args_bin = []
   bin = "./tmp/main"
   cmd = "go build -o ./tmp/main ."
-  delay = 1000
+  delay = 0
   exclude_dir = ["assets", "tmp", "vendor", "testdata"]
   exclude_file = []
   exclude_regex = ["_test.go"]
@@ -24,7 +24,7 @@ tmp_dir = "tmp"
   post_cmd = []
   pre_cmd = []
   rerun = false
-  rerun_delay = 500
+  rerun_delay = 0
   send_interrupt = false
   stop_on_error = false
 
@@ -43,10 +43,19 @@ tmp_dir = "tmp"
   clean_on_exit = false
 
 [proxy]
-  app_port = 0
-  enabled = false
-  proxy_port = 0
+
+  enabled = true
+  proxy_port = 8080
+  app_port = 1337
+
 
 [screen]
   clear_on_rebuild = false
   keep_scroll = true
+
+post_cmd = [
+  "lsof -i :8080 -sTCP:LISTEN | sed 1d | awk '{print $2}' | xargs kill -9"
+]
+pre_cmd = [
+  "lsof -i :8080 -sTCP:LISTEN | sed 1d | awk '{print $2}' | xargs kill -9"
+]

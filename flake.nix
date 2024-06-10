@@ -61,6 +61,18 @@
             #vendorHash = "sha256-pQpattmS9VmO3ZIQUFn66az8GSmB4IvYhTTCFn6SUmo=";
             vendorHash = null;
           };
+
+          devShell = pkgs.mkShell {
+            packages = with pkgs; [
+              curl
+              git
+              gopls
+              gotools
+              graphviz
+              perl
+              go_1_22
+              yarn
+            ];
         });
     };
 }

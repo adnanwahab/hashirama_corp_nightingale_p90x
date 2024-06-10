@@ -53,6 +53,10 @@ func newLocator(frame *frameImpl, selector string, options ...LocatorLocatorOpti
 	return locator
 }
 
+func (l *locatorImpl) equals(locator Locator) bool {
+	return l.frame == locator.(*locatorImpl).frame && l.err == locator.(*locatorImpl).err && l.selector == locator.(*locatorImpl).selector
+}
+
 func (l *locatorImpl) Err() error {
 	return l.err
 }
@@ -188,6 +192,10 @@ func (l *locatorImpl) Click(options ...LocatorClickOptions) error {
 		}
 	}
 	return l.frame.Click(l.selector, opt)
+}
+
+func (l *locatorImpl) ContentFrame() FrameLocator {
+	return newFrameLocator(l.frame, l.selector)
 }
 
 func (l *locatorImpl) Count() (int, error) {

@@ -25,7 +25,7 @@
              const videoUrl = response.videoUrl;
              const videoContainer = document.getElementById("result");
              console.log(response.videoUrl)
-             videoContainer.innerHTML = `<video width="320" height="240" controls><source src="${videoUrl}" type="video/mp4">Your browser does not support the video tag.</video>`;
+             videoContainer.innerHTML = `<video width="320" height="240" controls><source src="${videoUrl}" type="video/mp4">Your browser does not support the video tag.</video>`    ;
 
              // const blob = new Blob([binaryBuffer], { type: 'video/mp4' }); // Adjust the 'type' according to your video format
              //
@@ -39,7 +39,3 @@
      });
     </script>
 </body>
-
-
-
-
