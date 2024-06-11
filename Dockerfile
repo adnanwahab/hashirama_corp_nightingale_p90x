@@ -24,7 +24,7 @@ ENV LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 # Build and install the ZED GStreamer plugin
 WORKDIR /usr/local/zed-gstreamer
 RUN mkdir build && cd build && \
-    cmake -DCMAKE_BUILD_TYPE=Release .. && \
+    cmake -DCMAKE_BUILD_TYPE=Release -DCUDA_CUDA_LIBRARY=/usr/local/cuda/lib64/stubs/libcuda.so .. && \
     make && \
     make install
 
