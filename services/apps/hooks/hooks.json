@@ -1,0 +1,13 @@
+[
+  {
+    "id": "redeploy-webhook",
+    "execute-command": "/home/adnan/hashirama/services/router-hacker/start.sh",
+    "command-working-directory": "/home/adnan/"
+  },
+
+{
+    "id": "drive",
+    "execute-command": "/home/adnan/hashirama/services/roomba/start.sh",
+    "command-working-directory": "/home/adnan/"
+  }
+]

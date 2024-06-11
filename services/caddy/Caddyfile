@@ -84,7 +84,7 @@ dns cloudflare eIz2PWhNvg-_STY3sWe0EWh2ZJDvacTNtKg4ru8Z
 
 
 handle {
-reverse_proxy 0.0.0.0:1323
+reverse_proxy 0.0.0.0:1337
 }
 
 encode zstd gzip

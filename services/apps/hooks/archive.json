@@ -1,0 +1,84 @@
+[
+    {
+      "id": "redeploy-webhook",
+      "execute-command": "/home/adnan/hashirama_corp_nightingale_p90x/redeploy.sh",  // <- update this one
+      "command-working-directory": "/home/adnan/hashirama_corp_nightingale_p90x/",  // <- update this one
+      "pass-arguments-to-command":
+      [
+        {
+          "source": "payload",
+          "name": "head_commit.id"
+        },
+        {
+          "source": "payload",
+          "name": "pusher.name"
+        },
+        {
+          "source": "payload",
+          "name": "pusher.email"
+        }
+      ],
+      "trigger-rule":
+      {
+        "and":
+        [
+          {
+            "match":
+            {
+              "type": "payload-hash-sha1",
+              "secret": "verysecret",  // <- this has to match with your GitHub webhook secret
+              "parameter":
+              {
+                "source": "header",
+                "name": "X-Hub-Signature"
+              }
+            }
+          },
+          {
+            "match":
+            {
+              "type": "value",
+              "value": "refs/heads/master",
+              "parameter":
+              {
+                "source": "payload",
+                "name": "ref"
+              }
+            }
+          }
+        ]
+      }
+    }
+  {
+    "id": "redeploy-webhook",
+    "execute-command": "ls",
+    "command-working-directory": "~/hashirama_corp_nightingale_p90x/"
+  },
+
+  {
+    "id": "drive",
+    "execute-command": "./scripts/redeploy.sh",
+    "command-working-directory": "~/hashirama_corp_nightingale_p90x/"
+
+  },
+
+
+  {
+    "id": "turn",
+    "execute-command": "./scripts/turn.sh",
+    "command-working-directory": "~/hashirama_corp_nightingale_p90x/"
+  },
+
+    {
+    "id": "beep",
+    "execute-command": "./scripts/beep.sh",
+    "command-working-directory": "~/hashirama_corp_nightingale_p90x/"
+  },
+
+    {
+    "id": "admin",
+    "execute-command": "./scripts/admin.sh",
+    "command-working-directory": "~/hashirama_corp_nightingale_p90x/"
+  },
+
+]
