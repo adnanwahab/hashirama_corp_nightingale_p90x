@@ -9,7 +9,9 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     cmake \
     git \
-    libopencv-dev \
+    && apt-get remove -y libopencv-dev \
+    && apt-get install -y \
+    libopencv-dev=4.5.4+dfsg-9ubuntu4 \
     libopencv-contrib-dev=4.5.4+dfsg-9ubuntu4 \
     libopencv-calib3d-dev=4.5.4+dfsg-9ubuntu4 \
     libopencv-core-dev=4.5.4+dfsg-9ubuntu4 \
