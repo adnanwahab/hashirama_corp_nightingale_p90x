@@ -12,7 +12,8 @@ RUN apt-get update && apt-get install -y \
     cmake \
     git
 
-RUN apt install libgstreamer1.0-0 gstreamer1.0-libav libgstrtspserver-1.0-0 gstreamer1.0-tools gstreamer1.0-x gstreamer1.0-alsa gstreamer1.0-gl gstreamer1.0-gtk3 gstreamer1.0-qt5 gstreamer1.0-pulseaudio libgstreamer1.0-dev libgstrtspserver-1.0-dev libgstreamer-plugins-base1.0-0 libgstreamer-plugins-base1.0-dev libgstreamer-plugins-good1.0-0 libgstreamer-plugins-good1.0-dev libgstreamer-plugins-bad1.0-0 libgstreamer-plugins-bad1.0-dev
+RUN apt install -y\
+   xdg-user-dirs uuid-runtime libgstreamer1.0-0 gstreamer1.0-libav libgstrtspserver-1.0-0 gstreamer1.0-tools gstreamer1.0-x gstreamer1.0-alsa gstreamer1.0-gl gstreamer1.0-gtk3 gstreamer1.0-qt5 gstreamer1.0-pulseaudio libgstreamer1.0-dev libgstrtspserver-1.0-dev libgstreamer-plugins-base1.0-0 libgstreamer-plugins-base1.0-dev libgstreamer-plugins-good1.0-0 libgstreamer-plugins-good1.0-dev libgstreamer-plugins-bad1.0-0 libgstreamer-plugins-bad1.0-dev
 
 RUN git clone https://github.com/stereolabs/zed-gstreamer.git /usr/local/zed-gstreamer
 
