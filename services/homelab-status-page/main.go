@@ -682,6 +682,24 @@ func fuck() {
     fmt.Printf("Error: %s\n", errBuf.String())
 	//exec a binary in go ~/go/bin/templ generate from golang
 }
+
+func beep (c echo.Context) error {
+	cmd := exec.Command("python", "robot_move.py")
+	var outBuf, errBuf bytes.Buffer
+	cmd.Stdout = &outBuf
+	cmd.Stderr = &errBuf
+	err := cmd.Start()
+	fmt.Printf("Output: %s\n", outBuf.String())
+    fmt.Printf("Error: %s\n", errBuf.String())
+	if err != nil {
+		fmt.Printf("Error: %s\n", err)
+		return err
+	}
+
+	return c.String(http.StatusOK, "done")
+
+}
+
 func main() {
 	 binaryName := os.Args[0]
 
@@ -705,6 +723,8 @@ func main() {
 	e.GET("/", renderTemplate("index"))
 	e.GET("/custom_endpoint", custom_endpont)
 	e.GET("/ws", websocket_handler)
+
+	e.POST("/beep", beep)
 
 	e.Static("/static", "static")
 	e.Static("/assets", "static")

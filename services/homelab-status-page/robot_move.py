@@ -1,6 +1,3 @@
-#
-# Licensed under 3-Clause BSD license available in the License file. Copyright (c) 2021-2023 iRobot Corporation. All rights reserved.
-#
 
 from irobot_edu_sdk.backend.bluetooth import Bluetooth
 from irobot_edu_sdk.robots import event, hand_over, Color, Robot, Root, Create3
@@ -9,11 +6,18 @@ from irobot_edu_sdk.music import Note
 import asyncio
 
 print('gay robot')
+robot = Create3(Bluetooth())
 
-async def main():
-    robot = Create3(Bluetooth())
-    #await robot.play_note(Note.A4, .1)
-    #
+@event(robot.when_play)
+async def main(robot):
+    print('fuck your mom')
+    print('robot', robot)
+    await robot.play_note(Note.A4, 2)
+    await robot.play_note(55, .1)
+    await robot.wait(0.3)
+    await robot.play_note(110, .1)
+    await robot.wait(0.3)
+    return 'ym'
     methods = [
         "get_cliff_sensors",
         "get_cliff_sensors_cached",
@@ -45,7 +49,8 @@ async def main():
         except Exception as e:
             print(f"Error calling {method}: {e}")
 
-asyncio.run(main())
+robot.play()
+#asyncio.run(main())
 
 # robot = Create3(Bluetooth())
 
