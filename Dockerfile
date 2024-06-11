@@ -17,6 +17,10 @@ RUN apt install -y\
 
 RUN git clone https://github.com/stereolabs/zed-gstreamer.git /usr/local/zed-gstreamer
 
+# Set environment variables for CUDA
+ENV PATH=/usr/local/cuda/bin:$PATH
+ENV LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+
 # Build and install the ZED GStreamer plugin
 WORKDIR /usr/local/zed-gstreamer
 RUN mkdir build && cd build && \
