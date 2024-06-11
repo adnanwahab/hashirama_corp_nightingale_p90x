@@ -1,6 +1,8 @@
 # Use the Stereolabs ZED base image with NVIDIA runtime support
-FROM stereolabs/zed:4.1-tools-devel-l4t-r36.3
 
+FROM ubuntu:24:04
+#FROM stereolabs/zed:4.1-tools-devel-l4t-r36.3
+#4.1-devel-jetson-jp6.0.0, 4.1-devel-l4t-r36.2
 # Set environment variables to avoid interactive prompts during package installation
 ENV DEBIAN_FRONTEND=noninteractive
 
