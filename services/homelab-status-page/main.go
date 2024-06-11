@@ -695,7 +695,7 @@ func beep (c echo.Context) error {
 		fmt.Printf("Error: %s\n", err)
 		return err
 	}
-
+	fmt.Printf("Output: %s\n", "OMG IT WORKS")
 	return c.String(http.StatusOK, "done")
 
 }
