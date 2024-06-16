@@ -1,3 +1,17 @@
+// make deploy better
+// get video to cum
+// clean repo
+// make 5 demo;
+//ai doctor
+//adaptive learning wut
+// 100 happy users
+// 100 scrapers - how much data gathered
+// sitting on top of a big exponential change in reality in the world
+//
+// microsoft + intel = rise of micro computers
+// google = growth of internet
+// what everyone got wrong - information was increasing exponentialyl
+// make useful all the worlds information
 package main
 import (
 	"golang.org/x/net/websocket"
@@ -23,11 +37,10 @@ import (
 	"os/exec"
 	"github.com/ollama/ollama/api"
 	"log"
-		"github.com/pion/example-webrtc-applications/v3/internal/signal"
-	"github.com/pion/rtp"
-	"github.com/pion/rtp/codecs"
-	"github.com/pion/webrtc/v3"
-	"github.com/pion/webrtc/v3/pkg/media/samplebuilder"
+	// "github.com/pion/rtp"
+	// "github.com/pion/rtp/codecs"
+	// "github.com/pion/webrtc/v3"
+	// "github.com/pion/webrtc/v3/pkg/media/samplebuilder"
 	//"syscall"
 	//"os/signal"
 	//"github.com/tmc/langchaingo/llms"
@@ -42,6 +55,55 @@ import (
 "net"
 	//"github.com/playwright-community/playwright-go"
 )
+// Because character development is the ultimate meme.
+
+//if you convince the elites, then their circles will follow.
+//the way to convince them, is with skill.
+
+// if i stay like this, it won't work.
+// my people are the weak. the forsaken. the broken. the sick. the helpless.
+// if i dont attain more skill than anyone, i'll lose all of them.
+//
+// so i discovered a way to fight with all my might
+// so that i won't loser anyone so that no one will go away.
+//
+// no one will be able to keep up with me anymore.
+//
+// 90% of human effort is wasted on incidental complexity from vestigal thought structures from 100s of years ago.
+//
+// the pandemic only happened because experts couldn't agree, so they had to default to antiquated processes.
+//
+// i'm not the main character, i am the precursor.
+//
+//
+//
+//
+//
+// right now is a critical period. the species is going through puberty.
+// in 300 years, there will be a eutopia, where people are deathless, and theres infinite prosperity
+// but we are the fore runners
+// we are perhaps the last genneration with war, and suffering, if we play the cards right.
+
+//
+//https://www.reddit.com/r/questions/comments/1dbeyjy/women_do_you_prefer_being_called_hot_sexy_or/
+
+
+
+
+
+
+
+
+
+
+
+//genius and iinstanity are correlated aristotle?
+// https://www.reddit.com/r/copypasta/comments/t3j1pb/raiden_vs_armstrong/
+// https://tvtropes.org/pmwiki/pmwiki.php/VillainHasAPoint/AnimeAndManga
+//https://tvtropes.org/pmwiki/pmwiki.php/Main/JerkassHasAPoint
+//https://tvtropes.org/pmwiki/pmwiki.php/Quotes/TheExtremistWasRight
+// i would sell my left leg to not have gone to the hospital and taken resperidrone.
+// i would sell my other leg to make resperidrone illegal
 	//"github.com/labstack/echo/v4/middleware"
 	//"https://github.com/sirupsen/logrus"
 	//"tailscale.com/atomicfile"

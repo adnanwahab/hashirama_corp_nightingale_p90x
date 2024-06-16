@@ -33,15 +33,20 @@ toolchain go1.22.3
 // github.com/joho/godotenv
 
 require (
+	github.com/a-h/templ v0.2.707
 	github.com/kkdai/youtube/v2 v2.10.1
 	github.com/labstack/echo/v4 v4.12.0
+	github.com/ollama/ollama v0.1.42
+	github.com/pion/example-webrtc-applications/v3 v3.0.5
+	github.com/pion/rtp v1.7.1
+	github.com/pion/webrtc/v3 v3.1.0-beta.3
 	github.com/playwright-community/playwright-go v0.4400.1
 	github.com/twilio/twilio-go v1.21.0
+	golang.org/x/net v0.26.0
 
 )
 
 require (
-	github.com/a-h/templ v0.2.707 // indirect
 	github.com/aymanbagabas/go-osc52/v2 v2.0.1 // indirect
 	github.com/bitly/go-simplejson v0.5.1 // indirect
 	github.com/charmbracelet/bubbles v0.18.0 // indirect
@@ -75,7 +80,21 @@ require (
 	github.com/muesli/cancelreader v0.2.2 // indirect
 	github.com/muesli/reflow v0.3.0 // indirect
 	github.com/muesli/termenv v0.15.2 // indirect
-	github.com/ollama/ollama v0.1.42 // indirect
+	github.com/pion/datachannel v1.4.21 // indirect
+	github.com/pion/dtls/v2 v2.0.9 // indirect
+	github.com/pion/ice/v2 v2.1.12 // indirect
+	github.com/pion/interceptor v0.0.15 // indirect
+	github.com/pion/logging v0.2.2 // indirect
+	github.com/pion/mdns v0.0.5 // indirect
+	github.com/pion/randutil v0.1.0 // indirect
+	github.com/pion/rtcp v1.2.6 // indirect
+	github.com/pion/sctp v1.7.12 // indirect
+	github.com/pion/sdp/v3 v3.0.4 // indirect
+	github.com/pion/srtp/v2 v2.0.5 // indirect
+	github.com/pion/stun v0.3.5 // indirect
+	github.com/pion/transport v0.12.3 // indirect
+	github.com/pion/turn/v2 v2.0.5 // indirect
+	github.com/pion/udp v0.1.1 // indirect
 	github.com/pions/dtls v1.0.2 // indirect
 	github.com/pions/pkg v0.0.0-20181115215726-b60cd756f712 // indirect
 	github.com/pions/webrtc v1.2.0 // indirect
@@ -92,9 +111,9 @@ require (
 	go.uber.org/multierr v1.11.0 // indirect
 	golang.org/x/crypto v0.24.0 // indirect
 	golang.org/x/exp v0.0.0-20240604190554-fc45aab8b7f8 // indirect
-	golang.org/x/net v0.26.0 // indirect
 	golang.org/x/sync v0.7.0 // indirect
 	golang.org/x/sys v0.21.0 // indirect
 	golang.org/x/text v0.16.0 // indirect
 	golang.org/x/time v0.5.0 // indirect
+	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1 // indirect
 )
