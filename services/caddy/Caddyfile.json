@@ -135,17 +135,6 @@
                   "static.hashirama.blog",
                   "hashirama.blog"
                 ]
-              },
-              "certificate_selection": {
-                "dns_names": [
-                  "robot.hashirama.blog",
-                  "photos.hashirama.blog",
-                  "jellyfin.hashirama.blog",
-                  "map.hashirama.blog",
-                  "jupyter.hashirama.blog",
-                  "static.hashirama.blog",
-                  "hashirama.blog"
-                ]
               }
             }
           ]
