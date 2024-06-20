@@ -1,4 +1,28 @@
+deploy to 7 things
+https://www.ycombinator.com/companies/zep-ai/jobs/J5TD9KW-backend-engineer
 
+
+https://github.com/anduril/jetpack-nixos
+https://console.postack.dev/compliance/campaigns
+https://xeiaso.net/blog/nixops-services-2020-11-09/
+https://xeiaso.net/talks/asg-2023-nixos/
+
+s. There's no "flink"/"spark" for golang. Yet.
+   https://hn.algolia.com/?q=homelab
+   https://x.com/bradfitz/status/1000087524876800000
+   https://github.com/danderson/netboot/tree/main/pixiecore
+   https://github.com/bradfitz/homelab?tab=readme-ov-file
+   https://www.reddit.com/r/homelab/about/
+   https://arxiv.org/abs/2406.11741
+
+
+st2 https://github.com/StackStorm/st
+https://github.com/fastlane/fastlane
+https://github.com/ray-project/ray
+https://github.com/capistrano/capistrano
+https://github.com/dagger/dagger
+https://github.com/caprover/caprover
+https://github.com/alirezadir/Production-Level-Deep-Learning]https://github.com/alirezadir/Production-Level-Deep-Learning
 
 make a cool titlte in org-mode
 Machine Learning Marrkup Langauge
