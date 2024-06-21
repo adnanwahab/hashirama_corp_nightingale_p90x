@@ -2,11 +2,23 @@
 from irobot_edu_sdk.backend.bluetooth import Bluetooth
 from irobot_edu_sdk.robots import event, hand_over, Color, Robot, Root, Create3
 from irobot_edu_sdk.music import Note
+from bluetooth import *
+
+print("performing inquiry...")
+
+nearby_devices = discover_devices(lookup_names = True)
+
+print("found %d devices" % len(nearby_devices))
+
+for name, addr in nearby_devices:
+     print(" %s - %s" % (addr, name))
 
 import asyncio
 
 print('gay robot')
-robot = Create3(Bluetooth())
+backend0 = Bluetooth('') # Connects to the first BLE robot detected.
+
+robot = Create3(backend0)
 
 @event(robot.when_play)
 async def main(robot):

@@ -1,10 +1,6 @@
     <body>
         <ul>
-            <li><a>admin</a></li>
-            <li><a>index</a></li>
-            <li><a>deployments</a></li>
-            <li><a>prometheus</a></li>
-            <li><a>sentry</a></li>
+
             <li><a></a></li>
             <li><a></a></li>
             <li><a></a></li>
@@ -28,4 +24,46 @@
             <li><a></a></li>
             <li><a></a></li>
         </ul>
+        <script>
+         //gottman
+         //archetype
+         //30 days - July 20
+
+         //
+
+         // On Device LLM = LLM OS = self aware ros ?? = LLM + motion planing ?
+         // Neural Net Plumbing - finetuning, datapipelines - Self Healing Maps
+         // Networking Study in edge Computing
+         // Clients - kotlin, js, emacslisp ?
+         [
+             'info-diet', // design + browser llm tech
+             'multiplayer-command-and-control', // networking + backend eng
+             'agentos-vit-vm', //nixos / ubuntu / docker / virt
+             'apm.el' // editor tech
+             // 'auto-labeling-tool-p2p',
+             // 'simulation-unreal',
+             // 'lidar-captcha',
+             // 'video-to-pdf',
+             // 'dating-photos'
+         ].forEach(function (text, index) {
+             let li = document.createElement('li')
+             let hasBorder = index < 4 ? 'p-4' : ''
+
+             li.innerHTML = `<a href="/${text}" class="${hasBorder}">${1+index}. ${text}</a>`
+             document.querySelector('ul').appendChild(li)
+
+         })
+
+
+         // 'immich',
+         // 'jellyfin',
+         //
+         // 'prometheus',
+         // 'granafa',
+         // 'sentry',
+         // 'logqik'
+
+
+         //CI/CD / LOL
+        </script>
     </body>

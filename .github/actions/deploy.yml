@@ -1,0 +1,45 @@
+name: Rebuild and Deploy Nix Flakes
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        machine: [ "orin", "x1c"]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Nix
+        run: |
+          curl -L https://nixos.org/nix/install | sh
+          source ~/.nix-profile/etc/profile.d/nix.sh
+
+      - name: Build Nix Flakes
+        run: nix build .#${{ matrix.machine }}
+
+      - name: Deploy to ${{ matrix.machine }}
+        env:
+          DEPLOY_HOST: ${{ secrets["${{ matrix.machine }}_HOST"] }}
+          DEPLOY_USER: ${{ secrets["${{ matrix.machine }}_USER"] }}
+          DEPLOY_KEY: ${{ secrets["${{ matrix.machine }}_SSH_KEY"] }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H $DEPLOY_HOST >> ~/.ssh/known_hosts
+          scp result $DEPLOY_USER@$DEPLOY_HOST:~/deployment
+          ssh $DEPLOY_USER@$DEPLOY_HOST 'bash -s' <<'EOF'
+            cd ~/deployment
+            nix-env -i ./result
+          EOF

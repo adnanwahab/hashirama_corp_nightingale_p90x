@@ -1,24 +1,31 @@
 {
-  description = "Deployment for my server cluster";
+  description = "NixOS configurations for my VMs";
 
-  # For accessing `deploy-rs`'s utility Nix functions
-  inputs.deploy-rs.url = "github:serokell/deploy-rs";
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+  };
 
-  outputs = { self, nixpkgs, deploy-rs }: {
-    nixosConfigurations.some-random-system = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [ ./configuration/configuration.nix ];
+  outputs = { self, nixpkgs }: {
+    nixosConfigurations = {
+      jetson = nixpkgs.lib.nixosSystem {
+        system = "aarch64linux";
+        modules = [
+          ./hosts/jetson/configuration.nix
+        ];
+      };
+      macbook = nixpkgs.lib.nixosSystem {
+        system = "aarch64linux";
+        modules = [
+          ./hosts/macbook/configuration.nix
+        ];
+      };
+
+      thinkpad = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/thinkpad/configuration.nix
+        ];
+      };
     };
-
-    deploy.nodes.orin = {
-        hostname = "ubuntu";
-        profiles.system = {
-          user = "adnan";
-          path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.some-random-system;
-        };
-    };
-
-    # This is highly advised, and will prevent many possible mistakes
-    checks = builtins.mapAttrs (system: deployLib: deployLib.deployChecks self.deploy) deploy-rs.lib;
   };
 }
