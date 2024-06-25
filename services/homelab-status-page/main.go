@@ -600,6 +600,7 @@ func renderTemplate(templateName string) echo.HandlerFunc {
 	// sweaters := Inventory{"wool",
 	// 	"17"}
 	return func(c echo.Context) error {
+		fmt.Printf("templateName", templateName)
 
 		if templateName == "/index" {
 			templateName = "index.temp"
@@ -777,9 +778,24 @@ func main() {
 	if false { tryStream()}
 	e := echo.New()
 	e.POST("/video-to-pdf", handleConvertVideoToPDF)
+
+
+shit := os.ExpandEnv("$HOME/hashirama/services/homelab-status-page/views/tools/*.html")
+	allMyRoutes, err := filepath.Glob(shit)
+	fmt.Println("wtfff", allMyRoutes)
+
+	if err != nil {return }
+	for i := 0; i < len(allMyRoutes); i++ {
+		filePath := string(allMyRoutes[i])
+		if filePath == "/" {continue}
+		trimmed := trimMyDick(filePath)
+		fmt.Println("wtfff", "tools/"+trimmed)
+		e.GET("/tools/" + trimmed, renderTemplate("tools/"+trimmed))
+    }
+
 	expandMyPuss := os.ExpandEnv("$HOME/hashirama/services/homelab-status-page/views/*.html")
 
-	allMyRoutes, err := filepath.Glob(expandMyPuss)
+	allMyRoutes, err = filepath.Glob(expandMyPuss)
 	if err != nil {return }
 	for i := 0; i < len(allMyRoutes); i++ {
 		filePath := string(allMyRoutes[i])
@@ -787,19 +803,11 @@ func main() {
 		trimmed := trimMyDick(filePath)
 		e.GET(trimmed, renderTemplate(trimmed))
     }
-	shit := os.ExpandEnv("$HOME/hashirama/services/homelab-status-page/views/tools/*.html")
-	allMyRoutes, err = filepath.Glob(shit)
-	if err != nil {return }
-	for i := 0; i < len(allMyRoutes); i++ {
-		filePath := string(allMyRoutes[i])
-		if filePath == "/" {continue}
-		trimmed := trimMyDick(filePath)
-		e.GET(trimmed, renderTemplate(trimmed))
-    }
+
 	e.GET("/form", renderTemplate("form"))
 	e.GET("/", renderTemplate("index"))
-	e.GET("/custom_endpoint", custom_endpont)
-	e.GET("/ws", websocket_handler)
+	// e.GET("/custom_endpoint", custom_endpont)
+	//  e.GET("/ws", websocket_handler)
 
 	e.POST("/beep", beep)
 
