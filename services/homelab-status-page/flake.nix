@@ -11,7 +11,8 @@
     };
   };
 
-  outputs = { self, nixpkgs, deploy-rs, gomod2nix, utils }:
+  # outputs = { self, nixpkgs, deploy-rs, gomod2nix, utils }
+  outputs = { self, nixpkgs, gomod2nix, utils }:
     let
       # Generate a user-friendly version number.
       version = builtins.substring 0 8 self.lastModifiedDate;
@@ -40,7 +41,7 @@
             inherit version;
             # In 'nix develop', we don't need a copy of the source tree
             # in the Nix store.
-            src = ./services/homelab-status-page/.;
+            src = /home/adnan/hashirama/services/homelab-status-page/.;
 
             # This hash locks the dependencies of this package. It is
             # necessary because of how Go requires network access to resolve

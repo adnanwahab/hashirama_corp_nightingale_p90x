@@ -778,7 +778,17 @@ func main() {
 	e := echo.New()
 	e.POST("/video-to-pdf", handleConvertVideoToPDF)
 	expandMyPuss := os.ExpandEnv("$HOME/hashirama/services/homelab-status-page/views/*.html")
+
 	allMyRoutes, err := filepath.Glob(expandMyPuss)
+	if err != nil {return }
+	for i := 0; i < len(allMyRoutes); i++ {
+		filePath := string(allMyRoutes[i])
+		if filePath == "/" {continue}
+		trimmed := trimMyDick(filePath)
+		e.GET(trimmed, renderTemplate(trimmed))
+    }
+	shit := os.ExpandEnv("$HOME/hashirama/services/homelab-status-page/views/tools/*.html")
+	allMyRoutes, err = filepath.Glob(shit)
 	if err != nil {return }
 	for i := 0; i < len(allMyRoutes); i++ {
 		filePath := string(allMyRoutes[i])
