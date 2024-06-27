@@ -597,6 +597,7 @@ func Unsafe(html string) templ.Component {
 // https://github.com/ollama/ollama/tree/main/examples/langchain-python-simple
 func renderTemplate(templateName string) echo.HandlerFunc {
 
+
 	// sweaters := Inventory{"wool",
 	// 	"17"}
 	return func(c echo.Context) error {
@@ -605,7 +606,7 @@ func renderTemplate(templateName string) echo.HandlerFunc {
 		if templateName == "/index" {
 			templateName = "index.temp"
 		}
-		rootPath := os.ExpandEnv("$HOME/hashirama/services/homelab-status-page/views")
+		rootPath := os.ExpandEnv("$HOME/hashirama/services/homelab-status-page/views/")
 		fmt.Printf("Received route on /%s\n", templateName)
 		name := path.Join(rootPath, templateName + ".html")
 		fmt.Printf("ROUTING TO %s\n", name)
@@ -621,14 +622,15 @@ func renderTemplate(templateName string) echo.HandlerFunc {
 		//
 
 		//func ToGoHTML(ctx context.Context, c Component) (s template.HTML, err error)
-		return headerComponent(str).Render(context.Background(), c.Response().Writer)
-		var buf bytes.Buffer
+		//fmt.Printf("oh shit dog %s%s\n", str, templateName)
+		return headerComponent(str, templateName).Render(context.Background(), c.Response().Writer)
+		// var buf bytes.Buffer
 
-		err = headerComponent(str).Render(context.Background(), &buf)
-		_, err = buf.WriteTo(c.Response().Writer)
+		// err = headerComponent(str).Render(context.Background(), &buf)
+		// _, err = buf.WriteTo(c.Response().Writer)
 
 
-		return err
+		// return err
 		//return
 	}
 }

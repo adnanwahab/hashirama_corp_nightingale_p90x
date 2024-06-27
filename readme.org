@@ -1,4 +1,71 @@
+1. home-manager config /configuration/home.nix w/ imports ? 
+2. vm - /etc/conf.nix w/ imports? (hardware etc )
+3. info-diet FF extension home page
+4. robot doctor home page (multiplayer)
+   
+hook into l4loopback to generate video programatially lol
+
+nixos = os config layer
+
+nix has 3 steps
+nix pkgmanager with home manager = host
+then make NIXOS VMS or docker images and yay
+so
+
+nix config =
+
+flake of flakes = each module defines its deps 
+vm nixos w/ identical or subset of nix umbrella folder
+share nix vm on all platforms 
+host home manager setup
+https://github.com/Haxxnet/Compose-Examples
+
+diet adherence
+focus training
+kage bunshin
+
+
+python = nn 
+golang == platform 
+nix - (home-manager ~/.config/home, vm-nixos-/etc/nixos/conf.nix, )
+https://nix-community.github.io/home-manager/index.xhtml#sec-install-nixos-module
+
 
 # Hashirama Robotics Consulting Services 
 
 # We specialize in Neural Net Plumbing to discover the true nature of the mind.
+
+deploy targets
+
+x1c, mbp, jetson×3, cloud 
+
+VM with nixos 
+
+
+https://nixos.wiki/wiki/Nix_Cookbook
+https://nixos.wiki/wiki/NixOps/Virtualization
+https://nixos.wiki/wiki/1Password
+https://nixos.wiki/wiki/Hyprlaznd
+https://nixos.wiki/wiki/Grafana
+https://nixos.wiki/wiki/Go
+https://nixos.wiki/wiki/Git
+https://nixos.wiki/wiki/GStreamer
+https://nixos.wiki/wiki/Fzf
+https://nixos.wiki/wiki/Fish
+https://nixos.wiki/wiki/Emacs
+https://nixos.wiki/wiki/Docker
+https://nixos.wiki/wiki/Accelerated_Video_Playback
+https://nixos.wiki/wiki/Android
+https://nixos.wiki/wiki/Appimage
+https://nixos.wiki/wiki/Bootloader
+https://nixos.wiki/wiki/Btrfs
+https://nixos.wiki/wiki/Comparison_of_secret_managing_schemes
+https://nixos.wiki/wiki/Continuous_Integration_(CI)
+https://nixos.wiki/wiki/Remote_Desktop
+https://nixos.wiki/wiki/Home_Manager
+https://nixos.wiki/wiki/NixOps
+
+https://emacsdocs.org/docs/elisp/Signals-to-Processes
+https://nixos.wiki/wiki/Syncthing
+
+https://frame.work/products/laptop-diy-13-gen-amd/configuration/new 800
